@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 
 namespace AStar
@@ -167,9 +165,49 @@ namespace AStar
 
                 }
             }
-            //Waiting for path tracing
-            static void Main(string[] args)
+            if (current_node.x == end_node.x && current_node.y == end_node.y)
+            {
+                List<List<int>> path = new List<List<int>> { };
+
+                while (current_node != null)
+                {
+
+                    path.Add(new List<int> { current_node.x, current_node.y });
+                    current_node = current_node.parent;
+
+                }
+                path.Reverse();
+                List<char> letters = "123456789abcdefghijklmnopqrstuvwxyz".ToCharArray().ToList();
+                for (int i = 0; i < path.Count; ++i)
+                {
+
+                    maze[path[i][0]][path[i][1]] = letters[i];
+                }
+
+                return maze;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        static void Main(string[] args)
         {
+            string file = "maze.txt";
+            Parser parser = new Parser(file);
+            List<List<char>> maze = parser.ParseMaze();
+            List<int> start = new List<int> { 5, 1 };
+            List<int> end = new List<int> { 1, 6 };
+            List<List<char>> Maze = AStar(start, end, maze);
+            foreach (var c in maze)
+            {
+                foreach (var elem in c)
+                {
+                    Console.Write(elem);
+                }
+                Console.WriteLine();
+            }
+
         }
     }
 }
