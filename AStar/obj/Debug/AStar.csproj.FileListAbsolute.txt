@@ -1,0 +1,6 @@
+d:\Users\Home\Desktop\Основи Програмування\Семестр 2\Лабораторна робота 2\AStar\bin\Debug\AStar.exe.config
+d:\Users\Home\Desktop\Основи Програмування\Семестр 2\Лабораторна робота 2\AStar\bin\Debug\AStar.exe
+d:\Users\Home\Desktop\Основи Програмування\Семестр 2\Лабораторна робота 2\AStar\bin\Debug\AStar.pdb
+d:\Users\Home\Desktop\Основи Програмування\Семестр 2\Лабораторна робота 2\AStar\obj\Debug\AStar.csprojAssemblyReference.cache
+d:\Users\Home\Desktop\Основи Програмування\Семестр 2\Лабораторна робота 2\AStar\obj\Debug\AStar.exe
+d:\Users\Home\Desktop\Основи Програмування\Семестр 2\Лабораторна робота 2\AStar\obj\Debug\AStar.pdb
