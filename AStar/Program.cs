@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace AStar
 {
@@ -90,6 +91,27 @@ namespace AStar
             }
         }
     }
+
+    class Parser
+    {
+        private readonly string file;
+        public Parser(string file)
+        {
+            this.file = file;
+        }
+        public List<List<char>> ParseMaze()
+        {
+            List<List<char>> maze = new List<List<char>> { };
+            StreamReader sr = new StreamReader(file);
+            while (!sr.EndOfStream)
+            {
+                maze.Add(sr.ReadLine().ToCharArray().ToList());
+            }
+            return maze;
+        }
+    };
+
+    
     class Program
     {
         static void Main(string[] args)
