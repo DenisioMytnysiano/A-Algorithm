@@ -121,8 +121,54 @@ namespace AStar
             var children = new List<Node> { new Node(x, y - 1), new Node(x, y + 1), new Node(x - 1, y), new Node(x + 1, y) };
             return children.Where(l => maze[l.x][l.y] != Convert.ToChar("x") || (l.x == end_n.x && l.y == end_n.y)).ToList();
         }
+        public static List<List<char>> AStar(List<int> start, List<int> end, List<List<char>> Maze)
+        {
+            List<List<char>> maze = Maze;
+            Node current_node = null;
+            var start_node = new Node(start[0], start[1]);
+            var end_node = new Node(end[0], end[1]);
+            var openList = new BinaryHeap();
+            var closedList = new List<Node> { };
+            int g = 0;
+            openList.Insert(start_node);
+            while (!openList.IsEmpty)
+            {
 
-        static void Main(string[] args)
+                current_node = openList.ExtractMin();
+                closedList.Add(current_node);
+
+
+                if (closedList.FirstOrDefault(n => n.x == end_node.x && n.y == end_node.y) != null) break;
+                List<Node> children = GetChildren(current_node.x, current_node.y, maze, end_node);
+                g++;
+                foreach (var child in children)
+                {
+                    if (closedList.FirstOrDefault(n => n.x == child.x && n.y == child.y) != null)
+                    {
+                        continue;
+                    }
+                    if (openList.items.FirstOrDefault(n => n.x == child.x && n.y == child.y) == null)
+                    {
+                        child.g = g;
+                        child.h = Math.Abs(end_node.x - child.x) + Math.Abs(end_node.y - child.y);
+                        child.f = child.g + child.h;
+                        child.parent = current_node;
+                        openList.Insert(child);
+                    }
+                    else
+                    {
+                        if (g + child.h < child.f)
+                        {
+                            child.g = g;
+                            child.f = child.g + child.h;
+                            child.parent = current_node;
+                        }
+                    }
+
+                }
+            }
+            //Waiting for path tracing
+            static void Main(string[] args)
         {
         }
     }
