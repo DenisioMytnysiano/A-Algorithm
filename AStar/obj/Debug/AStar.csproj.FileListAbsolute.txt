@@ -4,3 +4,15 @@ d:\Users\Home\Desktop\Основи Програмування\Семестр 2\�
 d:\Users\Home\Desktop\Основи Програмування\Семестр 2\Лабораторна робота 2\AStar\obj\Debug\AStar.csprojAssemblyReference.cache
 d:\Users\Home\Desktop\Основи Програмування\Семестр 2\Лабораторна робота 2\AStar\obj\Debug\AStar.exe
 d:\Users\Home\Desktop\Основи Програмування\Семестр 2\Лабораторна робота 2\AStar\obj\Debug\AStar.pdb
+C:\Users\Admin\Desktop\A-STAR\AStar\bin\Debug\AStar.exe.config
+C:\Users\Admin\Desktop\A-STAR\AStar\bin\Debug\AStar.exe
+C:\Users\Admin\Desktop\A-STAR\AStar\bin\Debug\AStar.pdb
+C:\Users\Admin\Desktop\A-STAR\AStar\obj\Debug\AStar.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\A-STAR\AStar\obj\Debug\AStar.exe
+C:\Users\Admin\Desktop\A-STAR\AStar\obj\Debug\AStar.pdb
+C:\Users\Admin\Desktop\Directories\A-STAR\AStar\bin\Debug\AStar.exe.config
+C:\Users\Admin\Desktop\Directories\A-STAR\AStar\bin\Debug\AStar.exe
+C:\Users\Admin\Desktop\Directories\A-STAR\AStar\bin\Debug\AStar.pdb
+C:\Users\Admin\Desktop\Directories\A-STAR\AStar\obj\Debug\AStar.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\Directories\A-STAR\AStar\obj\Debug\AStar.exe
+C:\Users\Admin\Desktop\Directories\A-STAR\AStar\obj\Debug\AStar.pdb
