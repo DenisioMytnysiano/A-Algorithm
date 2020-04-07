@@ -16,8 +16,15 @@ namespace FindWay
 
         private List<Node> GetChildren(int x, int y, List<List<char>> maze, Node end_n)
         {
-            var children = new List<Node> { new Node(x, y - 1), new Node(x, y + 1), new Node(x - 1, y), new Node(x + 1, y) };
-            return children.Where(l => maze[l.x][l.y] != Convert.ToChar("x") || (l.x == end_n.x && l.y == end_n.y)).ToList();
+            var children = new List<Node> { new Node(x, y - 1),
+                                            new Node(x, y + 1),
+                                            new Node(x - 1, y),
+                                            new Node(x + 1, y),
+                                            new Node(x - 1, y - 1),
+                                            new Node(x + 1, y + 1),
+                                            new Node(x - 1, y + 1),
+                                            new Node(x + 1, y - 1)};
+            return children.Where(l => maze[l.x][l.y] != Convert.ToChar("X") || (l.x == end_n.x && l.y == end_n.y)).ToList();
         }
 
 
@@ -81,7 +88,7 @@ namespace FindWay
                 List<char> letters = "123456789abcdefghijklmnopqrstuvwxyz".ToCharArray().ToList();
                 for (int i = 0; i < path.Count; ++i)
                 {
-                    way[path[i][0]][path[i][1]] = letters[i];
+                    way[path[i][0]][path[i][1]] = letters[i%letters.Capacity];
                 }
 
                 return way;
